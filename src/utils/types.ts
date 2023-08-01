@@ -1,7 +1,8 @@
-export interface Pokemon {
-  name: string;
-  url: string;
-}
+// export interface Pokemon {
+//   name: string;
+//   url: string;
+//   types: { name: string }[];
+// }
 
 export interface PokemonGridProps {
   data: {
@@ -32,10 +33,19 @@ export interface Move {
 export interface Pokemon {
   id: number;
   name: string;
-  types: Type[];
+  types: PokemonType[];
   stats: Stat[];
+  url: string;
   weight: number;
   moves: Move[];
+}
+
+export interface PokemonType {
+  slot: number;
+  type: {
+    name: string;
+    url: string;
+  };
 }
 
 export interface PokemonDetailsProps {

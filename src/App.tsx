@@ -1,3 +1,5 @@
+// App.tsx
+
 import React, { useState } from "react";
 import PokemonGrid from "./components/PokemonGrid/PokemonGrid";
 import PokemonDetails from "./components/PokemonDetails/PokemonDetails";
@@ -29,17 +31,18 @@ const App: React.FC = () => {
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
-  // Conditional render variables
   const isLoadingData = isLoading ? (
     <div className="loading">
       <Loader />
     </div>
   ) : null;
+
   const isError = error ? (
     <div>
       <ErrorPage errorMessage="Something wrong" />
     </div>
   ) : null;
+
   const isPokemonGrid = data ? (
     <PokemonGrid data={data} onPokemonClick={handlePokemonClick} />
   ) : null;
@@ -47,7 +50,7 @@ const App: React.FC = () => {
   const isPokemonSelected = selectedPokemon ? (
     <PokemonDetails selectedPokemon={selectedPokemon} />
   ) : (
-    <p>Pokemon not selected.</p>
+    <div className="pokemon-details-placeholder" /> // Placeholder div to reserve space for PokemonDetails
   );
 
   const isPrevButtonVisible =

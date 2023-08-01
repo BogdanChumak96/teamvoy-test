@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50% );
   align-items: center;
   gap: 10px;
   justify-items: center;
@@ -8,6 +8,10 @@
   width: 900px;
   margin: 0 auto;
   position: relative;
+}
+
+.pokemon-details-placeholder {
+  height: 400px;
 }
 
 .pokemon-card-container {

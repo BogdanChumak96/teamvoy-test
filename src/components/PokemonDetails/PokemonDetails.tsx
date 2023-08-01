@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./PokemonDetails.module.scss";
-import { PokemonDetailsProps, Stat, Type } from "../../utils/types";
+import { PokemonDetailsProps, PokemonType, Stat } from "../../utils/types";
 
 const PokemonDetails: React.FC<PokemonDetailsProps> = ({ selectedPokemon }) => {
   const [showExtraInfo, setShowExtraInfo] = useState(false);
@@ -15,7 +15,7 @@ const PokemonDetails: React.FC<PokemonDetailsProps> = ({ selectedPokemon }) => {
   }
 
   const types = selectedPokemon.types
-    .map((type: Type) => type.type.name)
+    .map((type: PokemonType) => type.type.name)
     .join(", ");
 
   const attackStat = selectedPokemon.stats.find(
