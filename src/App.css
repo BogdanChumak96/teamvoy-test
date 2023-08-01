@@ -5,12 +5,8 @@
   gap: 10px;
   justify-items: center;
   padding: 30px 50px;
-}
-@media (max-width: 768px) {
-  .container {
-    display: flex;
-    flex-direction: column-reverse;
-  }
+  width: 60%;
+  margin: 0 auto;
 }
 
 .load-more-button-container {
@@ -29,4 +25,11 @@
 
 .load-more-button:hover {
   background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
