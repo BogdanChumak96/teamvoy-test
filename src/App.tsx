@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import { Pokemon } from "./utils/types";
 import { usePokemons } from "./utils/helpers";
 import Loader from "./components/Loader/Loader";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 const App: React.FC = () => {
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
@@ -34,7 +35,11 @@ const App: React.FC = () => {
       <Loader />
     </div>
   ) : null;
-  const isError = error ? <div>Error fetching data</div> : null;
+  const isError = error ? (
+    <div>
+      <ErrorPage errorMessage="Something wrong" />
+    </div>
+  ) : null;
   const isPokemonGrid = data ? (
     <PokemonGrid data={data} onPokemonClick={handlePokemonClick} />
   ) : null;
