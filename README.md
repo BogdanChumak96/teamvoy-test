@@ -1,6 +1,6 @@
 # Teamvoy-test-task
 
-It's an app for displaying pokémon 
+It's an app for displaying pokémons 
 ![Pokemon Image](https://media.tenor.com/ihqN6a3iiYEAAAAd/pikachu-shocked-face-stunned.gif)
 
 ## Installation
