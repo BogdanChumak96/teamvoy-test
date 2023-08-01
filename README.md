@@ -1,22 +1,33 @@
-# Vite + React Project
+# Teamvoy-test-task
 
-This is a Vite + React project that demonstrates a simple React application using the Vite build tool.
+It's an app for displaying pokémon 
 
 ## Installation
 
-1. Make sure you have Node.js and npm (Node Package Manager) installed on your system. You can download them from [Node.js website](https://nodejs.org/).
+⚙️ To run the Car List Application on your local machine, make sure you have the following prerequisites:
 
-2. Clone this repository to your local machine using the following command:
+- **Node.js**: ![Node.js](https://img.shields.io/badge/Node.js-v16.0.0%20or%20higher-green)
+- **npm**: ![npm](https://img.shields.io/badge/npm-v6.0.0%20or%20higher-red) (if using npm as your package manager)
+- **yarn**: ![yarn](https://img.shields.io/badge/yarn-v1.22.0%20or%20higher-blue) (if using yarn as your package manager)
 
-git clone https://github.com/your-username/vite-react-project.git
+You can check the installed versions of Node.js and npm by running the following commands in your terminal:
 
-3. Change into the project directory:
+    node --version
+    npm --version
 
-cd vite-react-project
+If you need to install or update Node.js and npm, you can download the latest version from the official [Node.js website](https://nodejs.org).
 
-4. Install project dependencies:
+After ensuring the prerequisites are met, follow these steps:
 
+1. **Clone the repository:**
+node --version
+git clone https://github.com/BogdanChumak96/teamvoy-test
+2. **Navigate to the project directory:**
+cd teamvoy-test
+3. **Install the dependencies:**
 npm install or yarn
+4. **Start the application:**
+npm dev or yarn dev
 
 ## Running the Project
 
