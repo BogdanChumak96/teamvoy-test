@@ -26,13 +26,13 @@ cd teamvoy-test
 3. **Install the dependencies:**
 npm install or yarn
 4. **Start the application:**
-npm dev or yarn dev
+npm dev or yarn dev  
 This will start the development server, and your application will be available at [http://localhost:3000](http://localhost:3000). Any changes you make to 
 
 
 ## Building for Production
 
-1. **To build the project for production, use the following command:
+1. **To build the project for production, use the following command:**
 npm run build
 
 This will create an optimized production build in the `dist` directory.
