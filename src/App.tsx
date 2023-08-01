@@ -5,6 +5,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import { Pokemon } from "./utils/types";
 import { usePokemons } from "./utils/helpers";
+import Loader from "./components/Loader/Loader";
 
 const App: React.FC = () => {
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
@@ -28,7 +29,11 @@ const App: React.FC = () => {
   };
 
   // Conditional render variables
-  const isLoadingData = isLoading ? <div className="loading">Loading...</div> : null;
+  const isLoadingData = isLoading ? (
+    <div className="loading">
+      <Loader />
+    </div>
+  ) : null;
   const isError = error ? <div>Error fetching data</div> : null;
   const isPokemonGrid = data ? (
     <PokemonGrid data={data} onPokemonClick={handlePokemonClick} />
