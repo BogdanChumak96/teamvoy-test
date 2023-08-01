@@ -1,23 +1,17 @@
 import React, { useState } from "react";
-import { useQuery } from "react-query";
 import PokemonGrid from "./components/PokemonGrid/PokemonGrid";
 import PokemonDetails from "./components/PokemonDetails/PokemonDetails";
 import "./App.css";
 import Header from "./components/Header/Header";
 import { Pokemon } from "./utils/types";
+import { usePokemons } from "./utils/helpers";
 
 const App: React.FC = () => {
   const [selectedPokemon, setSelectedPokemon] = useState<Pokemon | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 12;
 
-  const { isLoading, error, data } = useQuery(["pokemons", currentPage], () =>
-    fetch(
-      `https://pokeapi.co/api/v2/pokemon?limit=${pageSize}&offset=${
-        (currentPage - 1) * pageSize
-      }`
-    ).then((res) => res.json())
-  );
+  const { isLoading, error, data } = usePokemons(currentPage, pageSize);
 
   const handlePokemonClick = async (pokemon: Pokemon) => {
     const response = await fetch(pokemon.url);
@@ -39,7 +33,7 @@ const App: React.FC = () => {
   const isPokemonGrid = data ? (
     <PokemonGrid data={data} onPokemonClick={handlePokemonClick} />
   ) : null;
-  
+
   const isPokemonSelected = selectedPokemon ? (
     <PokemonDetails selectedPokemon={selectedPokemon} />
   ) : (
