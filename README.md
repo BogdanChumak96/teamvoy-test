@@ -27,19 +27,12 @@ cd teamvoy-test
 npm install or yarn
 4. **Start the application:**
 npm dev or yarn dev
+This will start the development server, and your application will be available at [http://localhost:3000](http://localhost:3000). Any changes you make to 
 
-## Running the Project
-
-To run the project in development mode, use the following command:
-
-npm run dev or yarn dev
-
-This will start the development server, and your application will be available at [http://localhost:3000](http://localhost:3000). Any changes you make to the source code will automatically trigger hot-reloading and update the application in the browser.
 
 ## Building for Production
 
-To build the project for production, use the following command:
-
+1. **To build the project for production, use the following command:
 npm run build
 
 This will create an optimized production build in the `dist` directory.
