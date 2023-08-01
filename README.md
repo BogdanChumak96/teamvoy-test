@@ -20,7 +20,6 @@ If you need to install or update Node.js and npm, you can download the latest ve
 After ensuring the prerequisites are met, follow these steps:
 
 1. **Clone the repository:**
-node --version
 git clone https://github.com/BogdanChumak96/teamvoy-test
 2. **Navigate to the project directory:**
 cd teamvoy-test
