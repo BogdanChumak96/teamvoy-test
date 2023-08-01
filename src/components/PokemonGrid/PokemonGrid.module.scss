@@ -2,7 +2,8 @@
 .pokemon-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 16px;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
   
     @media (max-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
@@ -15,12 +16,23 @@
     .pokemon-card-container {
       cursor: pointer;
     }
+
+    .image-not-found {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc; 
+        margin-bottom: 6px;
+      }
   
     .pokemon-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 12px;
+      height: 80%;
       background-color: #f2f2f2;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
