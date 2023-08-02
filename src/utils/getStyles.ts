@@ -2,7 +2,7 @@ export const getTypeStyles = (type: string) => {
   switch (type) {
     case "normal":
       return {
-        backgroundColor: "#A8A77A", // Normal ый
+        backgroundColor: "#A8A77A", // Normal
         color: "#ffffff",
       };
     case "rock":

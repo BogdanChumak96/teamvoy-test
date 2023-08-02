@@ -1,6 +1,6 @@
 import { useQuery } from "react-query";
 
-const fetchPokemons = async (currentPage: number, pageSize: number) => {
+export const fetchPokemons = async (currentPage: number, pageSize: number) => {
   const res = await fetch(
     `https://pokeapi.co/api/v2/pokemon?limit=${pageSize}&offset=${
       (currentPage - 1) * pageSize
