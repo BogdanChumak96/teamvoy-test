@@ -47,11 +47,6 @@ const App: React.FC = () => {
     <PokemonGrid data={data} onPokemonClick={handlePokemonClick} />
   ) : null;
 
-  const isPokemonSelected = selectedPokemon ? (
-    <PokemonDetails selectedPokemon={selectedPokemon} />
-  ) : (
-    <div className="pokemon-details-placeholder" /> // Placeholder div to reserve space for PokemonDetails
-  );
 
   const isPrevButtonVisible =
     !isLoading && data?.results && currentPage > 1 ? (
@@ -74,7 +69,7 @@ const App: React.FC = () => {
         {isLoadingData}
         {isError}
         {isPokemonGrid}
-        {isPokemonSelected}
+          <PokemonDetails selectedPokemon={selectedPokemon} />
         <div className="load-more-button-container">
           {isPrevButtonVisible}
           {isLoadMoreButtonVisible}
