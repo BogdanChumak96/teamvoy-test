@@ -1,8 +1,3 @@
-// export interface Pokemon {
-//   name: string;
-//   url: string;
-//   types: { name: string }[];
-// }
 
 export interface PokemonGridProps {
   data: {
