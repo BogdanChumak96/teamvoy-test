@@ -32,7 +32,7 @@ const App: React.FC = () => {
   };
 
   const isLoadingData = isLoading ? (
-    <div className="loading">
+    <div className="empty-grid">
       <Loader />
     </div>
   ) : null;
