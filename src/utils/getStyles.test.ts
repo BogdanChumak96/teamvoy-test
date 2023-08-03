@@ -17,8 +17,6 @@ describe('getTypeStyles', () => {
         });
     });
 
-    // Add similar test cases for other types...
-
     it('should return default styles for unknown type', () => {
         const result = getTypeStyles('unknown_type');
         expect(result).toEqual({
